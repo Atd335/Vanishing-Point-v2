@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56daaa5158de1a479e146d8c43d9f5d, type: 3}
+  m_Name: Cool Song 1
+  m_EditorClassIdentifier: 
+  name: Cool Song 1
+  extension: .aud
+  fileType: 1
+  icon: {fileID: 21300000, guid: 2e3f0807a25228e4080bbeed6604c79b, type: 3}
+  isLocked: 0
+  limitToOneInstance: 1
+  window: {fileID: 806539659856732665, guid: 8ee67077bebcc264c97354f18947a7f3, type: 3}
+  content: {fileID: 8300000, guid: 34e395f60ce676e4fb4f23a62e7e1be3, type: 3}
+  positionOverride: {x: 275, y: -75}
+  windowPosition: {x: 50, y: 1030}
+  windowScale: {x: 550, y: 200}

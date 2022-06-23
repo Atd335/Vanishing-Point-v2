@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56daaa5158de1a479e146d8c43d9f5d, type: 3}
+  m_Name: Cool Model
+  m_EditorClassIdentifier: 
+  name: Cool Model
+  extension: .3dv
+  fileType: 4
+  icon: {fileID: 21300000, guid: 4e83306dcd392e54a9532728a6ff8ae9, type: 3}
+  isLocked: 0
+  limitToOneInstance: 1
+  window: {fileID: 806539659856732665, guid: d589c04184eaa294f8e2f1760a15ad6d, type: 3}
+  content: {fileID: 6620732395527351659, guid: fca8aa987175b0e4fad7207630ae3322, type: 3}
+  positionOverride: {x: 375, y: -75}
+  windowPosition: {x: 50, y: 1030}
+  windowScale: {x: 500, y: 500}
