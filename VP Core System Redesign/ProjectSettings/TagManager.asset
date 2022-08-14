@@ -22,6 +22,7 @@ TagManager:
   - paintStroke
   - Pause Canvas
   - SceneFade
+  - HighlightTextures
   layers:
   - Default
   - TransparentFX

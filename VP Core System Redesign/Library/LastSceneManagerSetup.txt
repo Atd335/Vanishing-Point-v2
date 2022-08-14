@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/Core Systems/Scenes/Prototyping/3D Testing Scene.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
