@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEditor;
 
 public class UpdateDriver : MonoBehaviour
@@ -27,7 +28,6 @@ public class UpdateDriver : MonoBehaviour
 
 
     public int returnScene;
-    public Shader flatShader;
     public bool mouseLocked;
     public AudioClip[] phones;
     public AudioClip song;
@@ -37,44 +37,30 @@ public class UpdateDriver : MonoBehaviour
     {
         ud = this;
 
-        this.gameObject.AddComponent<InteractableObjectLoader>();
         objectLoader = GetComponent<InteractableObjectLoader>();
-        objectLoader.shader = flatShader;
 
-        this.gameObject.AddComponent<ImageCapture>();
         imgCapture = GetComponent<ImageCapture>();
 
-        this.gameObject.AddComponent<CharacterController2D>();
         cc2d = GetComponent<CharacterController2D>();
 
-        this.gameObject.AddComponent<AnimationStateController>();
         animStates = GetComponent<AnimationStateController>();
 
-        this.gameObject.AddComponent<SpeechScript>();
         speech = GetComponent<SpeechScript>();
 
-        this.gameObject.AddComponent<CharacterController3D>();
         cc3d = GetComponent<CharacterController3D>();
 
-        this.gameObject.AddComponent<SFXScript>();
         sfx = GetComponent<SFXScript>();
 
-        this.gameObject.AddComponent<MusicScript>();
         music = GetComponent<MusicScript>();
 
-        this.gameObject.AddComponent<ModeSwitcher>();
         switcher = GetComponent<ModeSwitcher>();
 
-        this.gameObject.AddComponent<FreeMouseEnabler>();
         mouseEnabler = GetComponent<FreeMouseEnabler>();
 
-        this.gameObject.AddComponent<DeveloperTools>();
         devTools = GetComponent<DeveloperTools>();
 
-        this.gameObject.AddComponent<OverlayController>();
         overlay = GetComponent<OverlayController>();
 
-        this.gameObject.AddComponent<PauseSettingsScript>();
         pause = GetComponent<PauseSettingsScript>();
     }
 
@@ -123,5 +109,10 @@ public class UpdateDriver : MonoBehaviour
     public void speak(int id)
     {
         speech.Speak(dialogueObjs[id]);
+    }
+
+    public void easySceneChange(int index)
+    {
+        SceneManager.LoadScene(index);
     }
 }

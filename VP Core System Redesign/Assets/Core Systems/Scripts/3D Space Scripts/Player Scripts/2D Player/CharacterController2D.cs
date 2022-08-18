@@ -19,6 +19,7 @@ public class CharacterController2D : MonoBehaviour
     public Vector3 respawnPosition;
     public Vector3 worldPosition;
     public Vector3 checkPointPosition;
+    public Vector3 initialSpawnPoint;
 
     public GameObject player2D;
 
@@ -51,6 +52,8 @@ public class CharacterController2D : MonoBehaviour
     public UnityEvent onDie;
     public UnityEvent onRespawnCheckpoint;
 
+
+
     public void _Start()
     {
         ic = UpdateDriver.ud.GetComponent<ImageCapture>();
@@ -75,13 +78,14 @@ public class CharacterController2D : MonoBehaviour
         playerRectTransform.sizeDelta = new Vector2(Screen.width/64, Screen.height/18);
         animatedPlayerImage.rectTransform.sizeDelta = new Vector2(playerRectTransform.sizeDelta.y*1.5f, playerRectTransform.sizeDelta.y * 1.5f);
 
-
         playerPosition = CharacterController2D.Vector2IntFromVector3(playerRectTransform.anchoredPosition);
         playerPositionFloat = playerPosition;
         colliderRadius = Mathf.RoundToInt(playerRectTransform.sizeDelta.x/2f);
 
         collisionPoints = new List<Vector2>();
         cast3DPoint();
+
+        if (initialSpawnPoint != new Vector3(-1, -1, -1)) { worldPosition = initialSpawnPoint;  }
         respawnPosition = worldPosition;
 
         onDie = new UnityEvent();
@@ -144,7 +148,6 @@ public class CharacterController2D : MonoBehaviour
 
         playerPositionFloat = playerRectTransform.anchoredPosition;
         playerPosition = Vector2IntFromVector3(playerPositionFloat);
-
         collisionPoints.Clear();
 
         
@@ -287,11 +290,22 @@ public class CharacterController2D : MonoBehaviour
     //the death method also invokes an publically accessible event. 
     //possible uses: 
     //- trigger dialogue on death
-    //- 
+    //- play sound 
     public void DIE(string str = "Died")
     {
         worldPosition = respawnPosition;
-        switcher.toggleMode(true);
+
+        if (switcher.force2DMode)
+        {
+            inactiveMode();
+        }
+        else
+        {
+            switcher.toggleMode(true);
+        }
+
+        
+
         onDie.Invoke();
         print($"2D Character died from '{str}'.");
     }

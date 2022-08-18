@@ -9,6 +9,9 @@ public class ModeSwitcher : MonoBehaviour
     public float waitTime = .2f;
     public bool validSwitch;
 
+    public bool forceFPSMode;
+    public bool force2DMode;
+
     CharacterController2D cc2d;
     CharacterController3D cc3d;
 
@@ -25,15 +28,34 @@ public class ModeSwitcher : MonoBehaviour
         onFPS = new UnityEvent();
         on2D.AddListener(setRespawnPoint);
     }
+
     public void _Update()
     {
+        if (force2DMode && forceFPSMode) 
+        {
+            print("2D MODE and FPS MODE cannot be forced simultaneously!");
+            print("Defaulting to FORCE FPS MODE");
+
+            force2DMode = false;
+        }
+
         validSwitch = cc2d.isOnScreen && !cc2d.checkForColliderBetween();
 
-        if (Input.GetButtonDown("SwitchMode") && validSwitch)
+        if (Input.GetButtonDown("SwitchMode") && validSwitch && !forceFPSMode && !force2DMode)
         {
             toggleMode();
         }
     }
+
+    public void forceMode2D(bool b)
+    {
+        force2DMode = b;
+    }
+    public void forceMode3D(bool b)
+    {
+        forceFPSMode = b;
+    }
+
 
     public void toggleMode()
     {

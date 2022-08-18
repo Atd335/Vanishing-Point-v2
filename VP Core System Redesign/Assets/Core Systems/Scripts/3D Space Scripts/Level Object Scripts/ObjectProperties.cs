@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cakeslice;
 
 public class ObjectProperties : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class ObjectProperties : MonoBehaviour
     {
         setColor2D(color_2D);
         setColor3D(color_3D);
+    }
+
+    public void enableHighlight(bool b)
+    {
+        GetComponent<Outline>().enabled = b;   
     }
 
 

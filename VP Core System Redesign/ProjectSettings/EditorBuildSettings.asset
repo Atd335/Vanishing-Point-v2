@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Core Systems/Scenes/Example Tutorial.unity
+    guid: 57f97b008204ec34cbf80eaff18e1a9a
+  - enabled: 1
     path: Assets/Core Systems/Scenes/Prototyping/OS Testing.unity
     guid: 7ce94ccbe11828e4cbda38c63c8d2538
   - enabled: 1

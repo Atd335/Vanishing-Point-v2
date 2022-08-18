@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637933525465974276
-    m_Hash: 2784564863
+      ticks: 637963888870916573
+    m_Hash: 3295341089
   m_LockFileStatus:
     m_FilePath: C:/Users/18adi/Documents/Projects/Vanishing Point/Vanishing-Point-v2/VP
       Core System Redesign/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637933525466034386
-    m_Hash: 2075595666
+      ticks: 637963888870971684
+    m_Hash: 1693358038
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -313,6 +313,7 @@ m_PackageAssets:
         - 1.15.18
         - 1.17.0
         - 1.17.1
+        - 1.17.2
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -353,6 +354,7 @@ m_PackageAssets:
         - 1.15.18
         - 1.17.0
         - 1.17.1
+        - 1.17.2
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -694,13 +696,13 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
         path: 
-    - packageId: com.unity.probuilder@4.5.2
+    - packageId: com.unity.probuilder@5.0.6
       testable: 0
       isDirectDependency: 1
-      version: 4.5.2
+      version: 5.0.6
       source: 1
       resolvedPath: C:\Users\18adi\Documents\Projects\Vanishing Point\Vanishing-Point-v2\VP
-        Core System Redesign\Library\PackageCache\com.unity.probuilder@4.5.2
+        Core System Redesign\Library\PackageCache\com.unity.probuilder@5.0.6
       assetPath: Packages/com.unity.probuilder
       name: com.unity.probuilder
       displayName: ProBuilder
@@ -717,7 +719,12 @@ m_PackageAssets:
 
         Advanced features include UV editing, vertex colors,
         parametric shapes, and texture blending. With ProBuilder''s model export
-        feature it''s easy to tweak your levels in any external 3D modelling suite.'
+        feature it''s easy to tweak your levels in any external 3D modelling suite.
+
+
+        If
+        you are using URP/HDRP, be careful to also import the corresponding sample
+        project in the section below to get the proper materials.'
       status: 4
       errors: []
       versions:
@@ -795,9 +802,17 @@ m_PackageAssets:
       dependencies:
       - name: com.unity.settings-manager
         version: 1.0.3
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
       resolvedDependencies:
       - name: com.unity.settings-manager
         version: 1.0.3
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
       keywords:
       - 3d
       - model
@@ -831,13 +846,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637613656650000000
+      datePublishedTicks: 637928847600000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.com/Unity-Technologies/com.unity.probuilder.git
-        revision: 27f52072e5f94638d1f81bc53df38e59d5bac785
+        revision: a2e0f7904211f195c1c7661cdbed49fdc4a4130d
         path: 
     - packageId: com.unity.test-framework@1.1.27
       testable: 0
@@ -893,6 +908,7 @@ m_PackageAssets:
         - 1.1.29
         - 1.1.30
         - 1.1.31
+        - 1.1.33
         - 2.0.1-exp.1
         - 2.0.1-pre.12
         - 2.0.1-pre.18
@@ -901,10 +917,11 @@ m_PackageAssets:
         - 1.1.29
         - 1.1.30
         - 1.1.31
+        - 1.1.33
         - 2.0.1-exp.1
         - 2.0.1-pre.12
         - 2.0.1-pre.18
-        verified: 1.1.31
+        verified: 1.1.33
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6

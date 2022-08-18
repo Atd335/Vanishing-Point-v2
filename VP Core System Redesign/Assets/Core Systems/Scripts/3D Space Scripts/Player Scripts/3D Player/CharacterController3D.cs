@@ -35,6 +35,8 @@ public class CharacterController3D : MonoBehaviour
         head = GameObject.FindWithTag("Head 3D").transform;
         headmast = GameObject.FindWithTag("Head Mast 3D").transform;
 
+        cameraRotation = head.localRotation.eulerAngles;
+
         headPos = head.localPosition;
     }
     public void _Update()
@@ -95,15 +97,73 @@ public class CharacterController3D : MonoBehaviour
         CC.Move(moveDirection * playerSpd * Time.deltaTime);
     }
 
-    // Start is called before the first frame update
-    void Start()
+
+    public void InterpolateCharacterToPosition(Vector3 pos, float spd = 5)
     {
-        
+        StartCoroutine(InterpolateCharacterToPositionCoroutine(pos,spd));
     }
 
-    // Update is called once per frame
-    void Update()
+    public void InterpolateCharacterToPosition(string posStr)
     {
+        Vector3 pos;
+
+        pos.x = float.Parse(posStr.Split(',')[0]);
+        pos.y = float.Parse(posStr.Split(',')[1]);
+        pos.z = float.Parse(posStr.Split(',')[2]);
+
+        float spd = float.Parse(posStr.Split(',')[3]);
         
+        StartCoroutine(InterpolateCharacterToPositionCoroutine(pos, spd));
     }
+
+    IEnumerator InterpolateCharacterToPositionCoroutine(Vector3 pos, float spd)
+    {
+        float timer = 0;
+        Vector3 initPos = player3D.transform.position;
+
+        while (timer < 1)
+        {
+            timer += Time.deltaTime * spd;
+            timer = Mathf.Clamp(timer,0,1);
+
+            player3D.transform.position = Vector3.Lerp(initPos, pos, timer);
+
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+    }
+
+    public void InterpolateCharacterToRotation(Vector3 rot, float spd = 5)
+    {
+        InterpolateCharacterToRotationCoroutine(rot,spd);
+    }
+
+    public void InterpolateCharacterToRotation(string posStr)
+    {
+        Vector3 rot;
+
+        rot.x = float.Parse(posStr.Split(',')[0]);
+        rot.y = float.Parse(posStr.Split(',')[1]);
+        rot.z = float.Parse(posStr.Split(',')[2]);
+
+        float spd = float.Parse(posStr.Split(',')[3]);
+
+        StartCoroutine(InterpolateCharacterToRotationCoroutine(rot, spd));
+    }
+
+    IEnumerator InterpolateCharacterToRotationCoroutine(Vector3 rot, float spd)
+    {
+        float timer = 0;
+        Vector3 initRot = head.rotation.eulerAngles;
+
+        while (timer < 1)
+        {
+            timer += Time.deltaTime * spd;
+            timer = Mathf.Clamp(timer, 0, 1);
+
+            head.rotation = Quaternion.Lerp(Quaternion.Euler(initRot), Quaternion.Euler(rot), timer);
+
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+    }
+
 }
