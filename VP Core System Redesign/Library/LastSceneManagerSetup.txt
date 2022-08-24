@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Core Systems/Scenes/Example Tutorial.unity
+- path: Assets/Core Systems/Scenes/Level Design Team/Test Santi.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
