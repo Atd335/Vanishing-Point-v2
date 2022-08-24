@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Echo Canvas
+  - Collision Camera
+  - Collision Debug
+  - Player 2D
+  - Visual Camera
+  - Player 3D
+  - Head 3D
+  - Head Mast 3D
+  - Pointer 2D
+  - OverlayTextures
+  - OverlayTextureBG
+  - AnimatedPlayer
+  - EchoText
+  - EchoTextBox
+  - Icon Canvas
+  - paintStroke
+  - Pause Canvas
+  - SceneFade
+  - HighlightTextures
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 2D Objects
+  - Don't interact with 2D
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
