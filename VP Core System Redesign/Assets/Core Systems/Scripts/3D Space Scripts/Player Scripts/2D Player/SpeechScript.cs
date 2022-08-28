@@ -20,6 +20,8 @@ public class SpeechScript : MonoBehaviour
     public AudioClip[] phones;
 
     Image txtBox;
+    public Image playerIcon;
+    
     TextMeshProUGUI tmp;
     TextAnimator txtAnim;
     TextAnimatorPlayer txtAnimPlr;
@@ -47,6 +49,8 @@ public class SpeechScript : MonoBehaviour
         //Speak(UpdateDriver.ud.dialogueObjs[0]);
     }
 
+
+    float textboxTimer = 1;
     public void _Update()
     {
         if (showingBox){txtBox.rectTransform.sizeDelta = Vector2.Lerp(txtBox.rectTransform.sizeDelta, boxSize, Time.deltaTime * 15f);}
@@ -54,21 +58,29 @@ public class SpeechScript : MonoBehaviour
 
         Vector2 v = cc2d.playerRectTransform.anchoredPosition;
         
-        bool b = !cc2d.isOnScreen || (v.x < 0) || (v.x > Screen.width) || (v.y < 0) || (v.y > Screen.height);
+        bool characterOffScreen = !cc2d.isOnScreen || (v.x < 0) || (v.x > Screen.width) || (v.y < 0) || (v.y > Screen.height);
 
-        if (!b)
+        if (!characterOffScreen)
         {
-            boxPosition = cc2d.playerRectTransform.anchoredPosition+new Vector2(0,60);
+            //boxPosition = cc2d.playerRectTransform.anchoredPosition+new Vector2(0,60);
+            textboxTimer += Time.deltaTime * 5;
+            textboxTimer = Mathf.Clamp(textboxTimer,0,1);
+            boxPosition = Vector2.Lerp(new Vector2((boxSize.x / 2) + 5, 0 + 5), cc2d.playerRectTransform.anchoredPosition + new Vector2(0, 60), CreateEaseInEaseOutCurve().Evaluate(textboxTimer));
+            
             boxPosition.x = Mathf.Clamp(boxPosition.x,boxSize.x/2,Screen.width-(boxSize.x/2));
             boxPosition.y = Mathf.Clamp(boxPosition.y,0,Screen.height-(boxSize.y));
             txtBox.rectTransform.anchoredPosition = boxPosition;
-            
         }
         else
         {
+            textboxTimer = 0;
             boxPosition = new Vector2((boxSize.x / 2) + 5, 0 + 5);
             txtBox.rectTransform.anchoredPosition = Vector2.Lerp(txtBox.rectTransform.anchoredPosition, boxPosition, Time.deltaTime * 10f);
         }
+
+        playerIcon.color = Color.Lerp(playerIcon.color, new Color(1, 1, 1, System.Convert.ToInt32(characterOffScreen && showingBox)), Time.deltaTime * 20);
+
+        playerIcon.rectTransform.anchoredPosition = new Vector2(boxSize.x + 10, 0 + 5);
     }
 
     void playSound(char c)
@@ -119,5 +131,13 @@ public class SpeechScript : MonoBehaviour
     {
         showingBox = false;
         txtAnim.SetText("", true);
+    }
+
+    public static AnimationCurve CreateEaseInEaseOutCurve()
+    {
+        AnimationCurve curve = new AnimationCurve();
+        curve.AddKey(new Keyframe(0, 0, 0, 0));
+        curve.AddKey(new Keyframe(1, 1, 0, 0));
+        return curve;
     }
 }

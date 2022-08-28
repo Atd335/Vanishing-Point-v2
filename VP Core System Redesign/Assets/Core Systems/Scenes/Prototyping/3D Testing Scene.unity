@@ -158,10 +158,10 @@ Transform:
   - {fileID: 1988996792}
   - {fileID: 888114155}
   - {fileID: 1666745656}
-  - {fileID: 551845330}
   - {fileID: 1556343402}
   - {fileID: 707858241}
   - {fileID: 665919351}
+  - {fileID: 551845330}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -309,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 631661077}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -317,7 +317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -334,7 +334,7 @@ PrefabInstance:
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2143620722}
+      objectReference: {fileID: 2143620725}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -365,11 +365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: toggleMode
+      value: InterpolateCharacterToRotation
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: InterpolateCharacterToPosition
+      value: InterpolateCharacterToRotation
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -381,7 +381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ModeSwitcher, Assembly-CSharp
+      value: CharacterController3D, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -392,8 +392,12 @@ PrefabInstance:
       value: CharacterController3D, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
+      propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 0,0,0,10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: -3.0,-0.5,-6.0,10
+      value: 0,0,0,10
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894524, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: colliderEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
@@ -417,7 +421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894526, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8372607726834894526, guid: ee9823b670bc3064f847a6306cd37268, type: 3}
       propertyPath: m_LocalPosition.x
@@ -656,7 +660,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 54379813}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -28.41, y: -50.03, z: 0}
 --- !u!114 &665919352
 MonoBehaviour:
@@ -782,7 +786,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 54379813}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -28.41, y: -50.03, z: 0}
 --- !u!114 &707858242
 MonoBehaviour:
@@ -1711,7 +1715,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 54379813}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -28.41, y: -50.03, z: 0}
 --- !u!65 &1556343403
 BoxCollider:
@@ -2222,17 +2226,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b87199eb857749e43b4747f57298ef54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2143620722 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5948409224324296991, guid: 11bd85ad579f63d49b2c885d116ad4ed, type: 3}
-  m_PrefabInstance: {fileID: 5948409222894239597}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c52921c037781a24e825e20da1ae1bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2143620725 stripped

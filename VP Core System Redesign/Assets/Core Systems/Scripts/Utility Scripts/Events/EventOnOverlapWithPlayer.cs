@@ -16,6 +16,8 @@ public class EventOnOverlapWithPlayer : MonoBehaviour
 
     void Update()
     {
+        if (cc2d.colliderAtPlayerPosition().collider == null) { return; }
+
         if (cc2d.colliderAtPlayerPosition().collider.gameObject==this.gameObject)
         {
             onOverlap.Invoke();

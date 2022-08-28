@@ -52,8 +52,6 @@ public class CharacterController2D : MonoBehaviour
     public UnityEvent onDie;
     public UnityEvent onRespawnCheckpoint;
 
-
-
     public void _Start()
     {
         ic = UpdateDriver.ud.GetComponent<ImageCapture>();

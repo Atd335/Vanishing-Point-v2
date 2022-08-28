@@ -5,7 +5,6 @@ using cakeslice;
 
 public class ObjectProperties : MonoBehaviour
 {
-    
     public Color customColor;
     public Color color_2D = Color.white;
     public Color color_3D = Color.white;
@@ -15,6 +14,7 @@ public class ObjectProperties : MonoBehaviour
     public void setColor2D(Color col)
     {
         color_2D = col;
+        
     }
 
     public void setColor3D(Color col)
