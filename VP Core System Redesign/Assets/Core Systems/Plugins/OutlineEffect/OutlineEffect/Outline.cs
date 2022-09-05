@@ -39,6 +39,7 @@ namespace cakeslice
 
 		public int color;
 		public bool eraseRenderer;
+		public bool disableOnStart;
 
 		private void Awake()
 		{
@@ -46,9 +47,15 @@ namespace cakeslice
 			SkinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
 			SpriteRenderer = GetComponent<SpriteRenderer>();
 			MeshFilter = GetComponent<MeshFilter>();
+			
 		}
 
-		void OnEnable()
+        private void Start()
+        {
+			this.enabled = !disableOnStart;
+		}
+
+        void OnEnable()
 		{
 			OutlineEffect.Instance?.AddOutline(this);
 		}
