@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637963888870916573
-    m_Hash: 3295341089
+      ticks: 637980179637362030
+    m_Hash: 3148475623
   m_LockFileStatus:
     m_FilePath: C:/Users/18adi/Documents/Projects/Vanishing Point/Vanishing-Point-v2/VP
       Core System Redesign/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637963888870971684
-    m_Hash: 1693358038
+      ticks: 637980179637391834
+    m_Hash: 3824816292
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -138,6 +138,7 @@ m_PackageAssets:
         - 2.6.11
         - 2.6.14
         - 2.6.15
+        - 2.6.17
         - 2.7.1
         - 2.7.2
         - 2.7.3
@@ -154,8 +155,10 @@ m_PackageAssets:
         - 2.8.3
         - 2.8.4
         - 2.8.6
+        - 2.8.9
         - 2.9.0-pre.1
         - 2.9.0-pre.6
+        - 2.9.1
         compatible:
         - 2.5.0
         - 2.6.0-preview.2
@@ -176,6 +179,7 @@ m_PackageAssets:
         - 2.6.11
         - 2.6.14
         - 2.6.15
+        - 2.6.17
         - 2.7.1
         - 2.7.2
         - 2.7.3
@@ -192,9 +196,11 @@ m_PackageAssets:
         - 2.8.3
         - 2.8.4
         - 2.8.6
+        - 2.8.9
         - 2.9.0-pre.1
         - 2.9.0-pre.6
-        verified: 2.6.15
+        - 2.9.1
+        verified: 2.6.17
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -853,6 +859,84 @@ m_PackageAssets:
         type: git
         url: https://github.com/Unity-Technologies/com.unity.probuilder.git
         revision: a2e0f7904211f195c1c7661cdbed49fdc4a4130d
+        path: 
+    - packageId: com.unity.progrids@3.0.3-preview.6
+      testable: 0
+      isDirectDependency: 1
+      version: 3.0.3-preview.6
+      source: 1
+      resolvedPath: C:\Users\18adi\Documents\Projects\Vanishing Point\Vanishing-Point-v2\VP
+        Core System Redesign\Library\PackageCache\com.unity.progrids@3.0.3-preview.6
+      assetPath: Packages/com.unity.progrids
+      name: com.unity.progrids
+      displayName: ProGrids
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'Advanced grid and object snapping for the scene view. ProGrids
+        is a dynamically placed grid, available on all 3 axes and at any position
+        in the scene.
+
+
+        ProGrids snaps objects in world space, ensuring consistent
+        placement of objects in your level.
+
+
+        In addition, ProGrids is completely
+        customizable. Change the colors of your grid, the snap sizing, unit of measurement,
+        and more!'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 3.0.1-preview
+        - 3.0.2-preview
+        - 3.0.3-preview.0
+        - 3.0.3-preview.4
+        - 3.0.3-preview.5
+        - 3.0.3-preview.6
+        compatible:
+        - 3.0.1-preview
+        - 3.0.2-preview
+        - 3.0.3-preview.0
+        - 3.0.3-preview.4
+        - 3.0.3-preview.5
+        - 3.0.3-preview.6
+        verified: 
+      dependencies:
+      - name: com.unity.settings-manager
+        version: 1.0.2
+      resolvedDependencies:
+      - name: com.unity.settings-manager
+        version: 1.0.3
+      keywords:
+      - grid
+      - snap
+      - manipulation
+      - array
+      - align
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637209307060000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/com.unity.progrids.git
+        revision: 381f2b0b5dda11525d53e2c608284a3f68d1beff
         path: 
     - packageId: com.unity.test-framework@1.1.27
       testable: 0
