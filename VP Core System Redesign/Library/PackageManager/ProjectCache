@@ -6,7 +6,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637963888870916573
+      ticks: 637980204205701686
     m_Hash: 3295341089
   m_LockFileStatus:
     m_FilePath: C:/Users/18adi/Documents/Projects/Vanishing Point/Vanishing-Point-v2/VP
@@ -15,7 +15,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637963888870971684
+      ticks: 637980204205706653
     m_Hash: 1693358038
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -138,6 +138,7 @@ m_PackageAssets:
         - 2.6.11
         - 2.6.14
         - 2.6.15
+        - 2.6.17
         - 2.7.1
         - 2.7.2
         - 2.7.3
@@ -154,8 +155,10 @@ m_PackageAssets:
         - 2.8.3
         - 2.8.4
         - 2.8.6
+        - 2.8.9
         - 2.9.0-pre.1
         - 2.9.0-pre.6
+        - 2.9.1
         compatible:
         - 2.5.0
         - 2.6.0-preview.2
@@ -176,6 +179,7 @@ m_PackageAssets:
         - 2.6.11
         - 2.6.14
         - 2.6.15
+        - 2.6.17
         - 2.7.1
         - 2.7.2
         - 2.7.3
@@ -192,9 +196,11 @@ m_PackageAssets:
         - 2.8.3
         - 2.8.4
         - 2.8.6
+        - 2.8.9
         - 2.9.0-pre.1
         - 2.9.0-pre.6
-        verified: 2.6.15
+        - 2.9.1
+        verified: 2.6.17
       dependencies: []
       resolvedDependencies: []
       keywords:
